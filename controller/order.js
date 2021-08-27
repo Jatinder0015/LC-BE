@@ -95,7 +95,7 @@ exports.getAllOrder = (req, res, next) => {
       if (!err.statusCode) {
         err.statusCode = 500;
       }
-      next(err);
+      next(err => { console.log(err) });
     }
     )
 }
@@ -161,7 +161,7 @@ exports.acceptOrder = (req, res, next) => {
       )
   }
   )
-    .catch(err)
+    .catch(err => { console.log(err) })
 }
 
 
@@ -177,7 +177,7 @@ exports.dispatchOrder = (req, res, next) => {
       )
   }
   )
-    .catch(err)
+    .catch(err => { console.log(err) })
 }
 
 
