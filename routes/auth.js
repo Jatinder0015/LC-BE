@@ -48,4 +48,6 @@ router.get('/getUserByEmail/:email', authController.getUserByEmail);
 
 router.get('/get-user/:id',authController.getUser);
 
+router.delete('/delete-user/:userId',authController.deleteUser);
+
 module.exports = router;
